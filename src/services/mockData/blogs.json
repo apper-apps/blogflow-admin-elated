@@ -1,0 +1,68 @@
+[
+  {
+    "Id": 1,
+    "title": "Getting Started with React Hooks",
+    "content": "# Getting Started with React Hooks\n\nReact Hooks revolutionized how we write components in React. In this comprehensive guide, we'll explore the most commonly used hooks and how they can improve your React development experience.\n\n## useState Hook\n\nThe `useState` hook is the foundation of state management in functional components:\n\n```javascript\nconst [count, setCount] = useState(0);\n```\n\n## useEffect Hook\n\nFor side effects and lifecycle management:\n\n```javascript\nuseEffect(() => {\n  // Side effect logic here\n}, [dependency]);\n```\n\n## Best Practices\n\n- Always use the dependency array in useEffect\n- Keep state updates immutable\n- Use custom hooks for reusable logic\n\nHooks make our code more readable and maintainable while reducing complexity.",
+    "excerpt": "Learn the fundamentals of React Hooks and how they transform functional components with state management and lifecycle methods.",
+    "tags": ["React", "JavaScript", "Hooks", "Frontend"],
+    "status": "published",
+    "createdAt": "2024-01-15T10:00:00Z",
+    "updatedAt": "2024-01-15T10:00:00Z",
+    "authorId": "user1"
+  },
+  {
+    "Id": 2,
+    "title": "Advanced CSS Grid Techniques",
+    "content": "# Advanced CSS Grid Techniques\n\nCSS Grid is a powerful layout system that allows you to create complex, responsive layouts with ease. Let's dive into some advanced techniques that will elevate your grid game.\n\n## Grid Areas\n\nDefine named grid areas for better organization:\n\n```css\n.container {\n  display: grid;\n  grid-template-areas: \n    \"header header header\"\n    \"sidebar main aside\"\n    \"footer footer footer\";\n}\n```\n\n## Implicit vs Explicit Grids\n\nUnderstanding the difference between implicit and explicit grids is crucial for mastering CSS Grid.\n\n## Responsive Design with Grid\n\nCreate responsive layouts without media queries:\n\n```css\n.grid {\n  display: grid;\n  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));\n  gap: 20px;\n}\n```\n\nThese techniques will help you create more flexible and maintainable layouts.",
+    "excerpt": "Discover advanced CSS Grid techniques including grid areas, implicit grids, and responsive design patterns for modern web layouts.",
+    "tags": ["CSS", "Grid", "Layout", "Responsive"],
+    "status": "published",
+    "createdAt": "2024-01-14T14:30:00Z",
+    "updatedAt": "2024-01-14T14:30:00Z",
+    "authorId": "user1"
+  },
+  {
+    "Id": 3,
+    "title": "Building RESTful APIs with Node.js",
+    "content": "# Building RESTful APIs with Node.js\n\nCreating robust RESTful APIs is essential for modern web applications. This guide covers everything you need to know about building APIs with Node.js and Express.\n\n## Setting Up Express\n\nFirst, let's set up a basic Express server:\n\n```javascript\nconst express = require('express');\nconst app = express();\n\napp.use(express.json());\n\napp.listen(3000, () => {\n  console.log('Server running on port 3000');\n});\n```\n\n## CRUD Operations\n\nImplement the four basic operations:\n\n- **CREATE**: POST requests to add new resources\n- **READ**: GET requests to retrieve resources\n- **UPDATE**: PUT/PATCH requests to modify resources\n- **DELETE**: DELETE requests to remove resources\n\n## Error Handling\n\nProper error handling is crucial for API reliability:\n\n```javascript\napp.use((err, req, res, next) => {\n  console.error(err.stack);\n  res.status(500).json({ error: 'Something went wrong!' });\n});\n```\n\n## Authentication and Authorization\n\nImplement JWT-based authentication for secure API access.",
+    "excerpt": "Learn how to build scalable RESTful APIs using Node.js and Express, including CRUD operations, error handling, and authentication.",
+    "tags": ["Node.js", "Express", "API", "Backend"],
+    "status": "draft",
+    "createdAt": "2024-01-13T09:15:00Z",
+    "updatedAt": "2024-01-13T16:20:00Z",
+    "authorId": "user1"
+  },
+  {
+    "Id": 4,
+    "title": "Modern JavaScript ES2023 Features",
+    "content": "# Modern JavaScript ES2023 Features\n\nJavaScript continues to evolve with new features that make development more efficient and enjoyable. Let's explore the latest ES2023 additions.\n\n## Array Methods\n\n### findLast() and findLastIndex()\n\nFind elements from the end of an array:\n\n```javascript\nconst numbers = [1, 2, 3, 4, 5, 4, 3, 2, 1];\nconst lastEven = numbers.findLast(n => n % 2 === 0); // 2\nconst lastEvenIndex = numbers.findLastIndex(n => n % 2 === 0); // 7\n```\n\n### toReversed(), toSorted(), toSpliced()\n\nNon-mutating array methods:\n\n```javascript\nconst original = [3, 1, 4, 1, 5];\nconst reversed = original.toReversed(); // [5, 1, 4, 1, 3]\nconst sorted = original.toSorted(); // [1, 1, 3, 4, 5]\n// original remains unchanged\n```\n\n## WeakMap and WeakSet Enhancements\n\nNew methods for better memory management and performance.\n\n## Hashbang Grammar\n\nSupport for hashbang comments in JavaScript files:\n\n```javascript\n#!/usr/bin/env node\nconsole.log('Hello, World!');\n```\n\nThese features enhance code readability and performance.",
+    "excerpt": "Explore the latest JavaScript ES2023 features including new array methods, WeakMap enhancements, and hashbang grammar support.",
+    "tags": ["JavaScript", "ES2023", "Features", "Modern"],
+    "status": "published",
+    "createdAt": "2024-01-12T11:45:00Z",
+    "updatedAt": "2024-01-12T11:45:00Z",
+    "authorId": "user1"
+  },
+  {
+    "Id": 5,
+    "title": "Responsive Design Best Practices",
+    "content": "# Responsive Design Best Practices\n\nCreating responsive websites that work seamlessly across all devices is crucial in today's multi-device world. Here are the best practices to follow.\n\n## Mobile-First Approach\n\nStart designing for mobile devices first, then enhance for larger screens:\n\n```css\n/* Mobile styles */\n.container {\n  padding: 1rem;\n}\n\n/* Tablet and up */\n@media (min-width: 768px) {\n  .container {\n    padding: 2rem;\n  }\n}\n\n/* Desktop and up */\n@media (min-width: 1024px) {\n  .container {\n    padding: 3rem;\n  }\n}\n```\n\n## Flexible Images\n\nMake images responsive:\n\n```css\nimg {\n  max-width: 100%;\n  height: auto;\n}\n```\n\n## Fluid Typography\n\nUse relative units for better scalability:\n\n```css\nh1 {\n  font-size: clamp(1.5rem, 4vw, 3rem);\n}\n```\n\n## Touch-Friendly Interfaces\n\nEnsure interactive elements are at least 44px in size for better touch accessibility.\n\n## Testing Across Devices\n\nAlways test your responsive design on real devices and various screen sizes.\n\nFollowing these practices ensures your website provides an excellent user experience across all devices.",
+    "excerpt": "Master responsive design with mobile-first approach, flexible images, fluid typography, and touch-friendly interfaces for optimal user experience.",
+    "tags": ["Responsive", "CSS", "Mobile", "UX"],
+    "status": "draft",
+    "createdAt": "2024-01-11T13:20:00Z",
+    "updatedAt": "2024-01-11T15:30:00Z",
+    "authorId": "user1"
+  },
+  {
+    "Id": 6,
+    "title": "Performance Optimization for React Apps",
+    "content": "# Performance Optimization for React Apps\n\nOptimizing React applications is crucial for providing smooth user experiences. Let's explore various techniques to boost your app's performance.\n\n## Code Splitting\n\nSplit your bundle into smaller chunks:\n\n```javascript\nimport { lazy, Suspense } from 'react';\n\nconst LazyComponent = lazy(() => import('./LazyComponent'));\n\nfunction App() {\n  return (\n    <Suspense fallback={<div>Loading...</div>}>\n      <LazyComponent />\n    </Suspense>\n  );\n}\n```\n\n## Memoization\n\nUse React.memo for component memoization:\n\n```javascript\nconst ExpensiveComponent = React.memo(({ data }) => {\n  // Expensive computation\n  return <div>{processData(data)}</div>;\n});\n```\n\n## useMemo and useCallback\n\nOptimize expensive calculations and function references:\n\n```javascript\nconst memoizedValue = useMemo(() => {\n  return expensiveCalculation(a, b);\n}, [a, b]);\n\nconst memoizedCallback = useCallback(() => {\n  doSomething(a, b);\n}, [a, b]);\n```\n\n## Virtual Scrolling\n\nImplement virtual scrolling for large lists to improve performance.\n\n## Bundle Analysis\n\nAnalyze your bundle size and eliminate unnecessary dependencies.\n\nThese optimization techniques will significantly improve your React app's performance.",
+    "excerpt": "Optimize React application performance with code splitting, memoization, virtual scrolling, and bundle analysis techniques.",
+    "tags": ["React", "Performance", "Optimization", "JavaScript"],
+    "status": "published",
+    "createdAt": "2024-01-10T08:30:00Z",
+    "updatedAt": "2024-01-10T08:30:00Z",
+    "authorId": "user1"
+  }
+]
