@@ -159,9 +159,10 @@ const MarkdownEditor = ({ value, onChange, placeholder = "Write your blog conten
       </div>
       
       <div className="min-h-[400px]">
-        {activeTab === "edit" ? (
+{activeTab === "edit" ? (
           <Textarea
             id="markdown-textarea"
+            name="content"
             value={value}
             onChange={onChange}
             placeholder={placeholder}
