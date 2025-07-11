@@ -41,9 +41,9 @@ const MarkdownEditor = ({ value, onChange, placeholder = "Write your blog conten
         break;
       default:
         break;
-    }
+}
 
-    onChange({ target: { value: newText } });
+    onChange({ target: { name: "content", value: newText } });
     
     setTimeout(() => {
       textarea.focus();
